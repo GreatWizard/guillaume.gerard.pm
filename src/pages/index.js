@@ -5,6 +5,7 @@ import Image from "gatsby-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Pills from "../components/pills"
 import { rhythm } from "../utils/typography"
 import pluralizeReadingTime from "../utils/pluralize-reading-time"
 
@@ -33,6 +34,7 @@ const BlogIndex = ({ data, location }) => {
                 {` `}&middot;{` `}
                 {pluralizeReadingTime(node.fields.readingTime.minutes)}
               </small>
+              <Pills items={node.frontmatter.categories} />
               <Link to={node.fields.slug}>
                 <Image
                   style={{ marginTop: rhythm(0.5), marginBottom: rhythm(0.5) }}
@@ -84,6 +86,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            categories
             cover {
               childImageSharp {
                 fluid(maxHeight: 400, maxWidth: 1440) {

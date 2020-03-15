@@ -1,0 +1,113 @@
+.pills {
+  display: flex;
+}
+
+.pill {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  height: 1.25rem;
+  margin: 0.125rem;
+  border-radius: 1rem;
+}
+
+.pill:not(:first-child) {
+  margin-left: 0;
+}
+
+.pill--red {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
+
+.pill--pink {
+  background-color: #f8bbd0;
+  color: #880e4f;
+}
+
+.pill--purple {
+  background-color: #e1bee7;
+  color: #4a148c;
+}
+
+.pill--deep-purple {
+  background-color: #d1c4e9;
+  color: #311b92;
+}
+
+.pill--indigo {
+  background-color: #c5cae9;
+  color: #1a237e;
+}
+
+.pill--blue {
+  background-color: #bbdefb;
+  color: #0d47a1;
+}
+
+.pill--light-blue {
+  background-color: #b3e5fc;
+  color: #01579b;
+}
+
+.pill--cyan {
+  background-color: #b2ebf2;
+  color: #006064;
+}
+
+.pill--teal {
+  background-color: #b2dfdb;
+  color: #004d40;
+}
+
+.pill--green {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+.pill--light-green {
+  background-color: #dcedc8;
+  color: #33691e;
+}
+
+.pill--lime {
+  background-color: #f0f4c3;
+  color: #827717;
+}
+
+.pill--yellow {
+  background-color: #fff9c4;
+  color: #f57f17;
+}
+
+.pill--amber {
+  background-color: #ffecb3;
+  color: #ff6f00;
+}
+
+.pill--orange {
+  background-color: #ffe0b2;
+  color: #e65100;
+}
+
+.pill--deep-orange {
+  background-color: #ffccbc;
+  color: #bf360c;
+}
+
+.pill--brown {
+  background-color: #d7ccc8;
+  color: #3e2723;
+}
+
+.pill--grey {
+  background-color: #f5f5f5;
+  color: #212121;
+}
+
+.pill--blue-grey {
+  background-color: #cfd8dc;
+  color: #263238;
+}

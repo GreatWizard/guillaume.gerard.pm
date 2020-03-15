@@ -5,6 +5,7 @@ import Image from "gatsby-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Pills from "../components/pills"
 import { rhythm, scale } from "../utils/typography"
 import pluralizeReadingTime from "../utils/pluralize-reading-time"
 
@@ -40,6 +41,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {` `}&middot;{` `}
             {pluralizeReadingTime(post.fields.readingTime.minutes)}
           </small>
+          <Pills items={post.frontmatter.categories} />
           <Image
             fluid={post.frontmatter.cover.childImageSharp.fluid}
             alt="Cover image"
@@ -125,6 +127,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        categories
         cover {
           childImageSharp {
             fluid(maxHeight: 400, maxWidth: 1440) {
