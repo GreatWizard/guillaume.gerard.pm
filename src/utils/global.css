@@ -1,0 +1,122 @@
+body {
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #717171;
+  --coral: #ff7f50;
+  --crimson: #dc143c;
+  --image-border-width: 0px;
+
+  color: var(--black);
+  background-color: var(---white);
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.header__link {
+  box-shadow: none;
+  font-style: italic;
+  font-weight: bold;
+}
+.header__horizontal-links {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* bio */
+.bio {
+  display: flex;
+  justify-content: space-between;
+}
+.bio__content {
+  color: var(--crimson);
+  font-size: 1.25rem;
+}
+
+/* article */
+.article header a {
+  box-shadow: none;
+}
+.article-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+/* footer */
+.footer {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* links */
+small,
+small a {
+  color: var(--gray);
+}
+a {
+  color: var(--black);
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--crimson);
+  transition: color 0.3s ease;
+}
+
+/* horizontal-links */
+.horizontal-links {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+.horizontal-links > li {
+  display: inline-block;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+.horizontal-links > li:last-child {
+  margin-right: 0;
+}
+
+/* https://css-tricks.com/full-width-containers-limited-width-parents/ */
+.full-width {
+  width: calc(100vw - var(--image-border-width) * 2);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: calc(-50vw + var(--image-border-width));
+  margin-right: calc(-50vw + var(--image-border-width));
+}
+
+/* logo */
+.logo > svg {
+  height: 3rem;
+  width: 3rem;
+  vertical-align: middle;
+  animation: huerotate 10s infinite linear;
+}
+@keyframes huerotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+/* gatsby-remark-autolink-headers */
+a.anchor {
+  box-shadow: none;
+}
+
+/* gatsby-remark-code-title */
+.gatsby-code-title {
+  color: var(--gray);
+  font-style: italic;
+}

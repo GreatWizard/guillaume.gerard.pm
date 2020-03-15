@@ -14,55 +14,60 @@ import { rhythm } from "../utils/typography"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 70, height: 70, quality: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       site {
         siteMetadata {
-          author {
-            name
-            summary
-          }
-          social {
-            twitter
-          }
+          author
         }
       }
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
   return (
     <div
+      className="bio"
       style={{
-        display: `flex`,
         marginBottom: rhythm(2.5),
       }}
     >
       <Image
         fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
+        alt={author}
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 50,
+          minWidth: 70,
+          minHeight: 70,
           borderRadius: `100%`,
         }}
         imgStyle={{
           borderRadius: `50%`,
         }}
       />
-      <p>
-        Written by <strong>{author.name}</strong> {author.summary}
+      <span className="bio__content">
+        <span role="img" aria-label="man technologist">
+          👨‍💻
+        </span>
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+        Hi there! My name is <strong>{author}</strong>.{` `}
+        I'm a Lead Software Engineer at
+        {` `}
+        <a
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://www.people-doc.com"
+        >
+          PeopleDoc
         </a>
-      </p>
+        .
+      </span>
     </div>
   )
 }

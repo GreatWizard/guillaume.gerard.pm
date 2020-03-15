@@ -1,10 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import pluralizeReadingTime from "../utils/pluralize-reading-time"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -12,7 +14,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Writing" />
       <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
@@ -24,11 +26,18 @@ const BlogIndex = ({ data, location }) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
+                <Link to={node.fields.slug}>{title}</Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>
+                {node.frontmatter.date}
+                {` `}&middot;{` `}
+                {pluralizeReadingTime(node.fields.readingTime.minutes)}
+              </small>
+              <Image
+                style={{ marginTop: rhythm(0.5), marginBottom: rhythm(0.5) }}
+                fluid={node.frontmatter.cover.childImageSharp.fluid}
+                alt="Cover image"
+              />
             </header>
             <section>
               <p
@@ -53,17 +62,30 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true }, kind: { eq: "post" } } }
+    ) {
       edges {
         node {
           excerpt
           fields {
             slug
+            readingTime {
+              minutes
+            }
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            cover {
+              childImageSharp {
+                fluid(maxHeight: 400, maxWidth: 1440) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

@@ -1,0 +1,5 @@
+.pdf {
+  width: 100%;
+  min-height: 800px;
+  max-height: 100vh;
+}
