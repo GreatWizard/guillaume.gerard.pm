@@ -14,8 +14,6 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 .header__link {
   box-shadow: none;
@@ -31,10 +29,12 @@ body {
 .bio {
   display: flex;
   justify-content: space-between;
-}
-.bio__content {
   color: var(--crimson);
   font-size: 1.25rem;
+}
+.bio__break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 /* article */

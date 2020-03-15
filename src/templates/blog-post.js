@@ -23,13 +23,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       />
       <article className="article">
         <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
-            {post.frontmatter.published ? "" : "DRAFT: "}
+          <h1>
+            {post.frontmatter.published ? "" : "[DRAFT] "}
             {post.frontmatter.title}
           </h1>
           <small

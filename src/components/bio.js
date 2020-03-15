@@ -41,8 +41,7 @@ const Bio = () => {
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
         style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
+          marginRight: rhythm(1),
           minWidth: 70,
           minHeight: 70,
           borderRadius: `100%`,
@@ -51,13 +50,12 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <span className="bio__content">
-        <span role="img" aria-label="man technologist">
-          👨‍💻
-        </span>
-        {` `}
-        Hi there! My name is <strong>{author}</strong>.{` `}
-        I'm a Lead Software Engineer at
+      <h1
+        style={{
+          marginTop: 0,
+        }}
+      >
+        Hello! My name is {author}. I'm Lead Software Engineer at
         {` `}
         <a
           target="_blank"
@@ -66,8 +64,11 @@ const Bio = () => {
         >
           PeopleDoc
         </a>
-        .
-      </span>
+        .{` `}
+        <span role="img" aria-label="man technologist">
+          👨‍💻
+        </span>
+      </h1>
     </div>
   )
 }
