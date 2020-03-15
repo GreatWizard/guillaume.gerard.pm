@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <article key={node.fields.slug} style={{ marginBottom: rhythm(1) }}>
             <header>
               <h3
                 style={{
@@ -33,11 +33,13 @@ const BlogIndex = ({ data, location }) => {
                 {` `}&middot;{` `}
                 {pluralizeReadingTime(node.fields.readingTime.minutes)}
               </small>
-              <Image
-                style={{ marginTop: rhythm(0.5), marginBottom: rhythm(0.5) }}
-                fluid={node.frontmatter.cover.childImageSharp.fluid}
-                alt="Cover image"
-              />
+              <Link to={node.fields.slug}>
+                <Image
+                  style={{ marginTop: rhythm(0.5), marginBottom: rhythm(0.5) }}
+                  fluid={node.frontmatter.cover.childImageSharp.fluid}
+                  alt="Cover image"
+                />
+              </Link>
             </header>
             <section>
               <p
@@ -46,6 +48,9 @@ const BlogIndex = ({ data, location }) => {
                 }}
               />
             </section>
+            <p>
+              <Link to={node.fields.slug}>Read more</Link>
+            </p>
           </article>
         )
       })}
