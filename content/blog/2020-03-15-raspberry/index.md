@@ -4,6 +4,18 @@ date: "2020-03-15T13:51:00+01:00"
 description: Equipments + NAS + DSN Filters + Switch Lan Play
 categories:
   - engineering
+keywords:
+  - raspberry pi
+  - raspberrypi
+  - rpi
+  - pmount
+  - samba
+  - dns
+  - pi-hole
+  - pihole
+  - switch
+  - lan-play
+  - lanplay
 published: true
 kind: post
 cover: ./glen-carrie-GMsYzwFAH_k-unsplash.jpg

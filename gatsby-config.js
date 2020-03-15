@@ -4,6 +4,16 @@ module.exports = {
     author: `Guillaume Gérard`,
     description: `Guillaume Gérard's personnal blog.`,
     siteUrl: `https://guillaume.sh/`,
+    keywords: [
+      `blog`,
+      `engineering`,
+      `javascript`,
+      `guillaume gerard`,
+      `guillaume gérard`,
+      `guillaume.sh`,
+      `greatwizard`,
+      `ember.js`,
+    ],
     social: {
       github: `GreatWizard`,
       gitlab: `GreatWizard`,

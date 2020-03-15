@@ -5,6 +5,13 @@ description: Bind your LaTeX books for e-readers.
 categories:
   - engineering
   - ember.js
+keywords:
+  - emberjs
+  - ember.js
+  - circleci
+  - ci
+  - continuous integration
+  - workflow
 published: false
 kind: post
 cover: ./rick-mason-2FaCKyEEtis-unsplash.jpg

@@ -19,6 +19,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        keywords={post.frontmatter.keywords}
       />
       <article className="article">
         <header>
@@ -128,6 +129,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         categories
+        keywords
         cover {
           childImageSharp {
             fluid(maxHeight: 400, maxWidth: 1440) {
