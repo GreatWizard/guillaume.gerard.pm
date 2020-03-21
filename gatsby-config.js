@@ -11,8 +11,7 @@ module.exports = {
       `guillaume gerard`,
       `guillaume gérard`,
       `guillaume.sh`,
-      `greatwizard`,
-      `ember.js`,
+      `greatwizard`
     ],
     social: {
       github: `GreatWizard`,
@@ -27,6 +26,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/talks`,
+        name: `talks`,
       },
     },
     {

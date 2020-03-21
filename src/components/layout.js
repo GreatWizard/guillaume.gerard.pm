@@ -49,6 +49,9 @@ const Layout = ({ location, title, children }) => {
           <li>
             <Link to={"/"}>Writing</Link>
           </li>
+            <li>
+              <Link to={"/talks"}>Speaking</Link>
+            </li>
           <li>
             <Link to={"/resume"}>Resume</Link>
           </li>

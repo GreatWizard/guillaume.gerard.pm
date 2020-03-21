@@ -17,24 +17,24 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Writing" />
       <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+      {posts.map(({ node: post }) => {
+        const title = post.frontmatter.title || post.fields.slug
         return (
-          <article key={node.fields.slug} style={{ marginBottom: rhythm(1) }}>
+          <article key={post.fields.slug} style={{ marginBottom: rhythm(1) }}>
             <header>
               <h2>
-                <Link to={node.fields.slug}>{title}</Link>
+                <Link to={post.fields.slug}>{title}</Link>
               </h2>
               <small>
-                {node.frontmatter.date}
+                {post.frontmatter.date}
                 {` `}&middot;{` `}
-                {pluralizeReadingTime(node.fields.readingTime.minutes)}
+                {pluralizeReadingTime(post.fields.readingTime.minutes)}
               </small>
-              <Pills items={node.frontmatter.categories} />
-              <Link to={node.fields.slug}>
+              <Pills items={post.frontmatter.categories} />
+              <Link to={post.fields.slug}>
                 <Image
                   style={{ marginTop: rhythm(0.5), marginBottom: rhythm(0.5) }}
-                  fluid={node.frontmatter.cover.childImageSharp.fluid}
+                  fluid={post.frontmatter.cover.childImageSharp.fluid}
                   alt="Cover image"
                 />
               </Link>
@@ -42,12 +42,12 @@ const BlogIndex = ({ data, location }) => {
             <section>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
+                  __html: post.frontmatter.description || post.excerpt,
                 }}
               />
             </section>
             <p>
-              <Link to={node.fields.slug}>Read more</Link>
+              <Link to={post.fields.slug}>Read more</Link>
             </p>
           </article>
         )
