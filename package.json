@@ -42,7 +42,8 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "ssh2-sftp-client": "^5.1.2"
   },
   "homepage": "https://github.com/GreatWizard/guillaume.sh#readme",
   "keywords": [
@@ -62,6 +63,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "lftp \"ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST\" -e \"set ftp:ssl-allow true; set ssl:verify-certificate no; mput public/*; quit\""
+    "deploy": "lftp \"ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST\" -e \"set ftp:ssl-allow true; set ssl:verify-certificate no; pwd /;put public/index.html; quit\""
   }
 }
