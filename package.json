@@ -23,8 +23,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "deploy": "lftp \"ftp://$FTP_USER:$FTP_PASSWORD@$FTP_HOST\" -e \"set ftp:ssl-allow true; set ssl:verify-certificate no; pwd /;put public/index.html; quit\""
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "dependencies": {
     "gatsby": "^3.0.3",
@@ -49,6 +48,7 @@
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
+    "prettier": "^2.2.1",
     "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -58,9 +58,5 @@
     "typeface-montserrat": "1.1.13",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
-  },
-  "devDependencies": {
-    "prettier": "^2.2.1",
-    "ssh2-sftp-client": "^6.0.1"
   }
 }
