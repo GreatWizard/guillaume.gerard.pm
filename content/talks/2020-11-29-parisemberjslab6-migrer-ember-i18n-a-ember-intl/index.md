@@ -14,4 +14,5 @@ published: true
 kind: talk
 slides: "https://www.slideshare.net/GuillaumeGrard3/paris-ember-js-lab-6-migrer-de-emberi18n-a-emberintl"
 ---
+
 How to migrate from ember-l18n onto ember-intl.

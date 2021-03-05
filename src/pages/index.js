@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -19,6 +19,7 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       {posts.map(({ node: post }) => {
         const title = post.frontmatter.title || post.fields.slug
+        const cover = getImage(post.frontmatter.cover)
         return (
           <article key={post.fields.slug} style={{ marginBottom: rhythm(1) }}>
             <header>
@@ -32,9 +33,9 @@ const BlogIndex = ({ data, location }) => {
               </small>
               <Pills items={post.frontmatter.categories} />
               <Link to={post.fields.slug}>
-                <Image
+                <GatsbyImage
+                  image={cover}
                   style={{ marginTop: rhythm(0.5), marginBottom: rhythm(0.5) }}
-                  fluid={post.frontmatter.cover.childImageSharp.fluid}
                   alt="Cover image"
                 />
               </Link>
@@ -59,7 +60,7 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
@@ -85,9 +86,7 @@ export const pageQuery = graphql`
             categories
             cover {
               childImageSharp {
-                fluid(maxHeight: 400, maxWidth: 1440) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(height: 400, layout: FULL_WIDTH, aspectRatio: 4)
               }
             }
           }

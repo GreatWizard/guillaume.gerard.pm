@@ -1,5 +1,5 @@
 import React from "react"
-import containerStyles from "./pills.module.css"
+import * as containerStyles from "./pills.module.css"
 import { rhythm } from "../utils/typography"
 
 function pillModifier(str) {
@@ -18,7 +18,7 @@ function pillModifier(str) {
       modifier = "grey"
   }
   return containerStyles[
-    `pill${modifier.toLocaleLowerCase().replace(/^\w/, c => c.toUpperCase())}`
+    `pill${modifier.toLocaleLowerCase().replace(/^\w/, (c) => c.toUpperCase())}`
   ]
 }
 

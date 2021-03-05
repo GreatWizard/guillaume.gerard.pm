@@ -11,7 +11,6 @@ const Layout = ({ location, title, children }) => {
         siteMetadata {
           social {
             github
-            gitlab
             twitter
             linkedin
           }
@@ -49,9 +48,9 @@ const Layout = ({ location, title, children }) => {
           <li>
             <Link to={"/"}>Writing</Link>
           </li>
-            <li>
-              <Link to={"/talks"}>Speaking</Link>
-            </li>
+          <li>
+            <Link to={"/talks"}>Speaking</Link>
+          </li>
           <li>
             <Link to={"/resume"}>Resume</Link>
           </li>
@@ -77,14 +76,6 @@ const Layout = ({ location, title, children }) => {
               href={`https://github.com/${social.github}`}
             >
               GitHub
-            </a>
-            <span> / </span>
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              href={`https://gitlab.com/${social.gitlab}`}
-            >
-              GitLab
             </a>
             <span> / </span>
             <a

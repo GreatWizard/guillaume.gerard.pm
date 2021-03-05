@@ -6,16 +6,25 @@ module.exports = {
     siteUrl: `https://guillaume.sh/`,
     keywords: [
       `blog`,
+      `software`,
+      `engineer`,
       `engineering`,
       `javascript`,
+      `js`,
+      `ember`,
+      `react`,
+      `vue`,
+      `angular`,
+      `guillaume`,
+      `gerard`,
+      `gérard`,
       `guillaume gerard`,
       `guillaume gérard`,
       `guillaume.sh`,
-      `greatwizard`
+      `greatwizard`,
     ],
     social: {
       github: `GreatWizard`,
-      gitlab: `GreatWizard`,
       twitter: `ggerard88`,
       linkedin: `guillaume-gérard-0263b946`,
     },
@@ -68,14 +77,9 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -90,6 +94,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -97,10 +102,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: { logo: "./static/favicon.png" },
-    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

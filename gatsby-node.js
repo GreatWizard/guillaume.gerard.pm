@@ -10,7 +10,9 @@ async function createBlogPostPages(graphql, actions) {
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { published: { eq: true }, kind: { eq: "post" } } }
+          filter: {
+            frontmatter: { published: { eq: true }, kind: { eq: "post" } }
+          }
           limit: 1000
         ) {
           edges {
@@ -60,7 +62,9 @@ async function createTalkPages(graphql, actions) {
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { published: { eq: true }, kind: { eq: "talk" } } }
+          filter: {
+            frontmatter: { published: { eq: true }, kind: { eq: "talk" } }
+          }
           limit: 1000
         ) {
           edges {
@@ -97,9 +101,9 @@ async function createTalkPages(graphql, actions) {
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-  await createBlogPostPages(graphql, actions);
-  await createTalkPages(graphql, actions);
-};
+  await createBlogPostPages(graphql, actions)
+  await createTalkPages(graphql, actions)
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions

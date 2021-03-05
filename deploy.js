@@ -15,7 +15,7 @@ async function main() {
 
   try {
     await client.connect(config)
-    client.on("upload", info => {
+    client.on("upload", (info) => {
       console.log(`Listener: Uploaded ${info.source}`)
     })
     let rslt = await client.uploadDir(src, dst)

@@ -24,7 +24,8 @@ const BlogIndex = ({ data, location }) => {
                 <a
                   target="_blank"
                   rel="noreferrer noopener"
-                  href={talk.frontmatter.slides}>
+                  href={talk.frontmatter.slides}
+                >
                   {title}
                 </a>
               </h2>
@@ -35,9 +36,7 @@ const BlogIndex = ({ data, location }) => {
               </small>
               <Pills items={talk.frontmatter.categories} />
             </header>
-            <section
-              style={{ marginTop: rhythm(1) }}
-            >
+            <section style={{ marginTop: rhythm(1) }}>
               <p
                 dangerouslySetInnerHTML={{
                   __html: talk.frontmatter.description || talk.excerpt,
@@ -48,12 +47,13 @@ const BlogIndex = ({ data, location }) => {
                   <a
                     target="_blank"
                     rel="noreferrer noopener"
-                    href={talk.frontmatter.slides}>
+                    href={talk.frontmatter.slides}
+                  >
                     View slides
                   </a>
                 </p>
               ) : (
-                ''
+                ""
               )}
             </section>
           </article>

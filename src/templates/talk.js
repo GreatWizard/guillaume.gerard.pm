@@ -45,12 +45,13 @@ const TalkTemplate = ({ data, pageContext, location }) => {
             <a
               target="_blank"
               rel="noreferrer noopener"
-              href={talk.frontmatter.slides}>
+              href={talk.frontmatter.slides}
+            >
               View slides
             </a>
           </p>
         ) : (
-          ''
+          ""
         )}
         <hr
           style={{

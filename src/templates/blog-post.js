@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -11,6 +11,7 @@ import pluralizeReadingTime from "../utils/pluralize-reading-time"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
+  const cover = getImage(post.frontmatter.cover)
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
@@ -38,8 +39,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {pluralizeReadingTime(post.fields.readingTime.minutes)}
           </small>
           <Pills items={post.frontmatter.categories} />
-          <Image
-            fluid={post.frontmatter.cover.childImageSharp.fluid}
+          <GatsbyImage
+            image={cover}
             alt="Cover image"
             className="full-width"
             style={{
@@ -127,9 +128,7 @@ export const pageQuery = graphql`
         keywords
         cover {
           childImageSharp {
-            fluid(maxHeight: 400, maxWidth: 1440) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(height: 400, layout: FULL_WIDTH, aspectRatio: 4)
           }
         }
         coverAuthor
