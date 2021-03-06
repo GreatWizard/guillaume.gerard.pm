@@ -9,6 +9,7 @@
 
 \usepackage{moderntimeline}
 
+\usepackage{xcolor}
 \usepackage{tikz}
 
 \usepackage[scale=0.8]{geometry}
@@ -18,9 +19,9 @@
 
 \firstname{Guillaume}
 \familyname{GÉRARD}
-\title{Lead Software Engineer}
+\title{Software Architect / Lead Software Engineer}
 \email{guillaume.gerard88@gmail.com}
-\extrainfo{30 y.o.\\ Driving Licence}
+\extrainfo{31 y.o.\\ Driving Licence}
 
 \tlmaxdates{2008}{2013}
 
@@ -28,68 +29,7 @@
 \nopagenumbers{}
 
 \definecolor{linecolor}{RGB}{67,115,182}
-
-\definecolor{androidtag}{RGB}{167,224,130}
-\definecolor{apitag}{RGB}{234,234,134}
-\definecolor{appletag}{RGB}{215,134,234}
-\definecolor{backbonetag}{RGB}{0,134,194}
-\definecolor{cicdtag}{RGB}{124,186,112}
-\definecolor{circlecitag}{RGB}{70,189,64}
-\definecolor{djangotag}{RGB}{12,60,38}
-\definecolor{eclipseplugintag}{RGB}{157,146,240}
-\definecolor{emberjstag}{RGB}{224,78,57}
-\definecolor{estag}{RGB}{207,207,207}
-\definecolor{githubactionstag}{RGB}{246,186,53}
-\definecolor{hibernatetag}{RGB}{188,174,121}
-\definecolor{javatag}{RGB}{234,144,144}
-\definecolor{jstag}{RGB}{252,228,79}
-\definecolor{lotusnotestag}{RGB}{246,186,53}
-\definecolor{microsofttag}{RGB}{134,206,234}
-\definecolor{pythontag}{RGB}{55,118,171}
-\definecolor{springtag}{RGB}{124,186,112}
-\definecolor{sqltag}{RGB}{234,175,230}
-
-\tikzstyle{androidtag} = [draw=androidtag, fill=androidtag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{apitag} = [draw=apitag, fill=apitag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{appletag} = [draw=appletag, fill=appletag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{backbonetag} = [draw=backbonetag, fill=backbonetag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{cicdtag} = [draw=cicdtag, fill=cicdtag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{circlecitag} = [draw=circlecitag, fill=circlecitag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{djangotag} = [draw=djangotag, fill=djangotag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{eclipseplugintag} = [draw=eclipseplugintag, fill=eclipseplugintag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{emberjstag} = [draw=emberjstag, fill=emberjstag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{estag} = [draw=estag, fill=estag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{githubactionstag} = [draw=githubactionstag, fill=githubactionstag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{hibernatetag} = [draw=hibernatetag, fill=hibernatetag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{javatag} = [draw=javatag, fill=javatag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{jstag} = [draw=jstag, fill=jstag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{lotusnotestag} = [draw=lotusnotestag, fill=lotusnotestag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{microsofttag} = [draw=microsofttag, fill=microsofttag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{pythontag} = [draw=pythontag, fill=pythontag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{springtag} = [draw=springtag, fill=springtag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-\tikzstyle{sqltag} = [draw=sqltag, fill=sqltag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
-
-\newcommand{\androidtag}{\begin{tikzpicture}\node [androidtag] (box){{\scriptsize \textbf{\phantom{|}Android\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\apitag}{\begin{tikzpicture}\node [apitag] (box){{\scriptsize \textbf{\phantom{|}API\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\backbonetag}{\begin{tikzpicture}\node [backbonetag] (box){{\scriptsize \color{white}{\textbf{\phantom{|}BackboneJS\phantom{|}}}}};\end{tikzpicture}}
-\newcommand{\cicdtag}{\begin{tikzpicture}\node [cicdtag] (box){{\scriptsize \textbf{\phantom{|}CI/CD\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\circlecitag}{\begin{tikzpicture}\node [circlecitag] (box){{\scriptsize \textbf{\phantom{|}CircleCI\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\csharptag}{\begin{tikzpicture}\node [microsofttag] (box){{\scriptsize \textbf{\phantom{|}C\#\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\djangotag}{\begin{tikzpicture}\node [djangotag] (box){{\scriptsize \color{white}{\textbf{\phantom{|}Django\phantom{|}}}}};\end{tikzpicture}}
-\newcommand{\eclipseplugintag}{\begin{tikzpicture}\node [eclipseplugintag] (box){{\scriptsize \textbf{\phantom{|}Plugin Eclipse\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\emberjstag}{\begin{tikzpicture}\node [emberjstag] (box){{\scriptsize \color{white}{\textbf{\phantom{|}EmberJS\phantom{|}}}}};\end{tikzpicture}}
-\newcommand{\estag}{\begin{tikzpicture}\node [estag] (box){{\scriptsize \textbf{\phantom{|}ElasticSearch\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\githubactionstag}{\begin{tikzpicture}\node [githubactionstag] (box){{\scriptsize \textbf{\phantom{|}GitHub Actions\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\hibernatetag}{\begin{tikzpicture}\node [hibernatetag] (box){{\scriptsize \textbf{\phantom{|}Hibernate\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\iostag}{\begin{tikzpicture}\node [appletag] (box){{\scriptsize \textbf{\phantom{|}iOS\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\javatag}{\begin{tikzpicture}\node [javatag] (box){{\scriptsize \textbf{\phantom{|}Java\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\jstag}{\begin{tikzpicture}\node [jstag] (box){{\scriptsize \textbf{\phantom{|}JS\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\lotusnotestag}{\begin{tikzpicture}\node [lotusnotestag] (box){{\scriptsize \textbf{\phantom{|}Lotus Notes\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\objectivectag}{\begin{tikzpicture}\node [appletag] (box){{\scriptsize \textbf{\phantom{|}Objective-C\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\pythontag}{\begin{tikzpicture}\node [pythontag] (box){{\scriptsize \color{white}{\textbf{\phantom{|}Python\phantom{|}}}}};\end{tikzpicture}}
-\newcommand{\springtag}{\begin{tikzpicture}\node [springtag] (box){{\scriptsize \textbf{\phantom{|}Spring\phantom{|}}}};\end{tikzpicture}}
-\newcommand{\sqlitetag}{\begin{tikzpicture}\node [sqltag] (box){{\scriptsize \textbf{\phantom{|}SQLite\phantom{|}}}};\end{tikzpicture}}
-
+\input{tags.tex}
 \begin{document}
 
 \maketitle
@@ -99,15 +39,23 @@
 \section{Professional experience}
 
 \cvline{Full-time\\since july 2014\\Remote}{
-\textbf{PeopleDoc -- Lead Software Engineer}\phantom{|}\newline~
-\jstag~\emberjstag~\pythontag~\apitag~\cicdtag~\circlecitag~\githubactionstag~\newline~
-Development of applications within a team using \textbf{EmberJS} framework.\newline~
-\textbf{Tests} at all levels (unit, integration, acceptance, end-to-end).\newline~
-Setup \textbf{Continous Integration} and \textbf{Continous Deployment}.\newline~
-Create and maintain tools and \textbf{Ember-addons} to manage the UI component framework, translations, API communication layer, CI configuration, various tools.\newline~
+\textbf{UKG -- Software Architect (since 2020)}\phantom{|}\newline~
+\jstag~\emberjstag~\stenciljstag~\pythontag~\djangotag~\websockettag~\apitag~\kubernetestag~\terraformtag~\gcptag~\newline~
+Migration of the deployment process on \textbf{Google Cloud Platform} using \textbf{Kubernetes} and \textbf{Terraform}.\newline~
+Create a common frontend chatbot \textbf{web-component} using \textbf{StencilJS} based on \textbf{websocket API}.\newline~
+\newline~
+\textbf{PeopleDoc -- Lead Software Engineer (since 2017)}\phantom{|}\newline~
+\jstag~\emberjstag~\pythontag~\djangotag~\apitag~\cicdtag~\circlecitag~\githubactionstag~\newline~
+Create and maintain tools and \textbf{Ember-addons} libraries to manage the UI component framework, translations, API communication layer, CI configuration and various tools.\newline~
 \textbf{Design API} with backend developers.\newline~
 \textbf{Newcomer training} on the EmberJS framework.\newline~
-Discussion about \textbf{good practices} and \textbf{documentation writing}.
+Discussion about \textbf{good practices} and \textbf{write documentation about technical standards}.\newline~
+\newline~
+\textbf{PeopleDoc -- Frontend Software Engineer}\phantom{|}\newline~
+\jstag~\emberjstag~\pythontag~\djangotag~\apitag~\cicdtag~\circlecitag~\amazonsthreetag~\newline~
+Development of applications within a team using \textbf{EmberJS} framework.\newline~
+\textbf{Tests} at all levels (unit, integration, acceptance, end-to-end).\newline~
+Setup workflows for \textbf{Continous Integration} and \textbf{Continous Deployment on Amazon S3}.
 }
 
 \vspace{0.3em}
