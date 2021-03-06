@@ -13,8 +13,8 @@ const ResumePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Résumé" />
       <MainBio />
-      <h2>My Resume</h2>
-      <PDF src={`${rootPath}Guillaume_GERARD_Resume.pdf`} title="my resume" />
+      <h2>My Résumé</h2>
+      <PDF src={`${rootPath}Guillaume_GERARD_Resume.pdf`} title="Download my résumé" />
     </Layout>
   )
 }
