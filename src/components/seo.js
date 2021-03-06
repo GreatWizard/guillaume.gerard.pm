@@ -23,6 +23,8 @@ const SEO = ({ description, lang = "en", meta = [], keywords = [], title }) => {
             social {
               twitter
             }
+            googleSiteVerification
+            bingSiteAuth
           }
         }
       }
@@ -76,6 +78,14 @@ const SEO = ({ description, lang = "en", meta = [], keywords = [], title }) => {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `google-site-verification`,
+          content: site.siteMetadata.googleSiteVerification,
+        },
+        {
+          name: `msvalidate.01`,
+          content: site.siteMetadata.bingSiteAuth,
         },
       ].concat(meta)}
     />

@@ -18,8 +18,6 @@ module.exports = {
       `guillaume`,
       `gerard`,
       `gérard`,
-      `guillaume gerard`,
-      `guillaume gérard`,
       `guillaume.sh`,
       `greatwizard`,
     ],
@@ -28,6 +26,8 @@ module.exports = {
       twitter: `ggerard88`,
       linkedin: `guillaume-gérard-0263b946`,
     },
+    googleSiteVerification: "QvBpgcG5kpCHMBHULcC5J_tK_AbdZeqK6zxFR6l4j9M",
+    bingSiteAuth: "D8537676531E829C9520F34527E6D78A",
   },
   plugins: [
     {

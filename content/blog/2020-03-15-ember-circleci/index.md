@@ -6,6 +6,7 @@ categories:
   - engineering
   - ember.js
 keywords:
+  - ember
   - emberjs
   - ember.js
   - circleci

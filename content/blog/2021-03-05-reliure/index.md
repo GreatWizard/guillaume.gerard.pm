@@ -6,13 +6,22 @@ categories:
   - engineering
 keywords:
   - reliure
+  - bind
+  - binding
+  - book
+  - bookbinding
+  - docx
+  - odt
+  - markdown
   - LaTeX
   - ebook
   - epub
   - mobi
-  - bind
-  - binding
-  - bookbinding
+  - pdf
+  - pandoc
+  - node
+  - nodejs
+  - node.js
 published: true
 kind: post
 cover: ./alfons-morales-YLSwjSy7stw-unsplash.jpg
