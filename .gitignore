@@ -11,3 +11,11 @@ node_modules/
 # gatsby files
 .cache/
 public
+
+# pdflatex
+/static/*.aux
+/static/*.log
+/static/*.out
+/static/*.fdb_latexmk
+/static/*.fls
+/static/*.synctex.gz
