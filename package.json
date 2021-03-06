@@ -27,6 +27,9 @@
     "latex": "node scripts/latex-tags.js > static/tags.tex && cd static && pdflatex Guillaume_GERARD_Resume.tex"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "gatsby": "^3.0.3",
     "gatsby-plugin-feed": "^3.0.0",
     "gatsby-plugin-image": "^1.0.0",

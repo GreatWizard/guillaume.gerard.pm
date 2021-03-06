@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import MainBio from "../components/main-bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Pills from "../components/pills"
@@ -14,7 +14,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Speaking" />
-      <Bio />
+      <MainBio />
       {talks.map(({ node: talk }) => {
         const title = talk.frontmatter.title || talk.fields.slug
         return (
@@ -29,10 +29,12 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </a>
               </h2>
-              <small>
+              <small title={talk.frontmatter.date}>
                 {talk.frontmatter.date}
                 {` `}&middot;{` `}
                 {talk.frontmatter.conference}
+                {` `}&middot;{` `}
+                {talk.frontmatter.location}
               </small>
               <Pills items={talk.frontmatter.categories} />
             </header>
@@ -86,6 +88,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             conference
+            location
             description
             categories
             slides

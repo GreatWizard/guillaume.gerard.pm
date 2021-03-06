@@ -16,7 +16,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
         childImageSharp {
-          gatsbyImageData(width: 70, height: 70, quality: 90, layout: FIXED)
+          gatsbyImageData(width: 56, height: 56, quality: 90, layout: FIXED)
         }
       }
       site {
@@ -41,33 +41,18 @@ const Bio = () => {
         alt={author}
         style={{
           marginRight: rhythm(1),
-          minWidth: 70,
-          minHeight: 70,
+          minWidth: 56,
+          minHeight: 56,
           borderRadius: `100%`,
         }}
         imgStyle={{
           borderRadius: `50%`,
         }}
       />
-      <h1
-        style={{
-          marginTop: 0,
-        }}
-      >
-        Hello! My name is {author}. I'm Lead Software Engineer at
-        {` `}
-        <a
-          target="_blank"
-          rel="noreferrer noopener"
-          href="https://www.people-doc.com"
-        >
-          PeopleDoc
-        </a>
-        .{` `}
-        <span role="img" aria-label="man technologist">
-          👨‍💻
-        </span>
-      </h1>
+      <p>
+        Written by <strong>{author}</strong> who lives and works in France
+        building useful things.
+      </p>
     </div>
   )
 }

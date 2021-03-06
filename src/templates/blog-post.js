@@ -45,6 +45,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             className="full-width"
             style={{
               marginTop: rhythm(1),
+              maxHeight: 350,
             }}
           />
           <small>
@@ -128,7 +129,7 @@ export const pageQuery = graphql`
         keywords
         cover {
           childImageSharp {
-            gatsbyImageData(height: 400, layout: FULL_WIDTH, aspectRatio: 4)
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
         coverAuthor

@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import Bio from "../components/bio"
+import MainBio from "../components/main-bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Pills from "../components/pills"
@@ -16,7 +16,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Writing" />
-      <Bio />
+      <MainBio />
       {posts.map(({ node: post }) => {
         const title = post.frontmatter.title || post.fields.slug
         const cover = getImage(post.frontmatter.cover)
@@ -86,7 +86,7 @@ export const pageQuery = graphql`
             categories
             cover {
               childImageSharp {
-                gatsbyImageData(height: 400, layout: FULL_WIDTH, aspectRatio: 4)
+                gatsbyImageData(layout: CONSTRAINED, height: 400, width: 600)
               }
             }
           }

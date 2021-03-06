@@ -1,4 +1,4 @@
-# guillaume.gerard.pm
+# [guillaume.sh](https://guillaume.sh)
 
-[![Build Status](https://travis-ci.com/GreatWizard/guillaume.gerard.pm.svg?branch=master)](https://travis-ci.com/GreatWizard/guillaume.gerard.pm)
-[![License: GPL-3.0](https://img.shields.io/github/license/GreatWizard/guillaume.gerard.pm)](https://github.com/GreatWizard/guillaume.gerard.pm/blob/master/LICENSE.md)
+[![Build and Deploy](https://github.com/GreatWizard/guillaume.sh/actions/workflows/deploy.yml/badge.svg)](https://github.com/GreatWizard/guillaume.sh/actions/workflows/deploy.yml)
+[![License: GPL-3.0](https://img.shields.io/github/license/GreatWizard/guillaume.sh)](https://github.com/GreatWizard/guillaume.sh/blob/master/LICENSE.md)
