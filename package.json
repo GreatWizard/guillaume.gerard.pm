@@ -23,7 +23,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "latex": "node scripts/latex-tags.js > static/tags.tex && cd static && pdflatex Guillaume_GERARD_Resume.tex"
   },
   "dependencies": {
     "gatsby": "^3.0.3",
