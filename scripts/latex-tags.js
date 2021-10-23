@@ -68,7 +68,8 @@ const tags = {
   },
   jstag: {
     text: "JS",
-    rgb: "252,228,79",
+    rgb: "248,220,61",
+    color: "darkgray"
   },
   kubernetestag: {
     text: "Kubernetes",
@@ -108,13 +109,57 @@ const tags = {
     text: "WebSocket",
     rgb: "234,175,230",
   },
+  csstag: {
+    text: "CSS",
+    rgb: "40,168,221"
+  },
+  lesstag: {
+    text: "LESS",
+    rgb: "29,53,92",
+    color: "white",
+  },
+  sasstag: {
+    text: "SASS",
+    rgb: "204,102,153",
+  },
+  gatsbytag: {
+    text: "Gatsby",
+    rgb: "101,51,149",
+    color: "white",
+  },
+  reacttag: {
+    text: "React",
+    rgb: "95,217,251",
+  },
+  nodejstag: {
+    text: "Node.js",
+    rgb: "2,88,0",
+    color: "white",
+  },
+  vuejstag: {
+    text: "Vue.js",
+    rgb: "53,148,105",
+    color: "white",
+  },
+  internationalizationtag: {
+    text: "i18n",
+    rgb: "161,202,241",
+    color: "white",
+  },
+  accessibilitytag: {
+    text: "a11y",
+    rgb: "202,161,241",
+    color: "white",
+  },
 }
 
 Object.keys(tags)
   .sort((a, b) => (a > b ? 1 : -1))
   .forEach((tag) => {
     let { text, rgb, color } = tags[tag]
-    console.log(`\\definecolor{${tag}}{RGB}{${rgb}}
+    console.log(`\\usepackage{tikz}
+    
+\\definecolor{${tag}}{RGB}{${rgb}}
 \\tikzstyle{${tag}} = [draw=${tag}, fill=${tag}, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
 \\newcommand{\\${tag}}{\\begin{tikzpicture}\\node [${tag}] (box){{\\scriptsize ${
       color ? `\\color{${color}}{` : ``

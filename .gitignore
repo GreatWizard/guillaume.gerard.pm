@@ -13,9 +13,9 @@ node_modules/
 public
 
 # pdflatex
-/static/*.aux
-/static/*.log
-/static/*.out
-/static/*.fdb_latexmk
-/static/*.fls
-/static/*.synctex.gz
+/scripts/*.aux
+/scripts/*.log
+/scripts/*.out
+/scripts/*.fdb_latexmk
+/scripts/*.fls
+/scripts/*.synctex.gz

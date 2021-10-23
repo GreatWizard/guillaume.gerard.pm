@@ -24,7 +24,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "latex": "node scripts/latex-tags.js > static/tags.tex && cd static && pdflatex Guillaume_GERARD_Resume.tex"
+    "latex": "cd scripts && node latex-tags.js > tags.tex && lualatex Guillaume_GERARD_Resume.tex && mv Guillaume_GERARD_Resume.pdf ../static/"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
