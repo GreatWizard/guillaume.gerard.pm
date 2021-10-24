@@ -1,36 +1,43 @@
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass{moderncv}
 \moderncvtheme[blue]{classic}
 
+\usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
-\usepackage{moderntimeline}
-
-\usepackage{xcolor}
-\usepackage{tikz}
+\AtBeginDocument{\usepackage{href-ul}}
 
 \usepackage[scale=0.8]{geometry}
 \geometry{hmargin=1.5cm, vmargin=1cm}
-\AtBeginDocument{\recomputelengths}
 \setlength{\hintscolumnwidth}{3.5cm}
+\recomputelengths
+
+\usepackage{datenumber, fp}
+\newcounter{birthday}
+\newcounter{today}
+\setmydatenumber{birthday}{1989}{11}{11}
+\setmydatenumber{today}{\the\year}{\the\month}{\the\day}
+\FPsub\result{\thetoday}{\thebirthday}
+\FPdiv\myage{\result}{365.2425}
+\FPtrunc\myage{\myage}{0}
+
+\usepackage{moderntimeline}
+\tlmaxdates{2008}{2013}
+\definecolor{timelinecolor}{RGB}{67,115,182}
+
+\input{tags.tex}
 
 \firstname{Guillaume}
 \familyname{GÉRARD}
 \title{Principal Software Engineer}
 \email{guillaume.gerard88@gmail.com}
-\extrainfo{31 y.o.\\ Remote from France}
-
-\tlmaxdates{2008}{2013}
-
-\quote{}
+\extrainfo{\href{https://guillaume.sh}{guillaume.sh}\\ \myage~y.o.\\ Remote (France)}
 \nopagenumbers{}
 
-\definecolor{linecolor}{RGB}{67,115,182}
-\input{tags.tex}
 \begin{document}
 
 \maketitle
 
-\vspace{-3.0em}
+\vspace{-0.3em}
 
 \section{Professional experience}
 
@@ -41,7 +48,7 @@
 	\newline~
 	\textbf{Novapost/PeopleDoc -- Frontend Software Engineer}\phantom{|}\newline~
 	\newline~
-	\jstag~\emberjstag~\stenciljstag~\internationalizationtag~\pythontag~\djangotag~\websockettag~\apitag\newline~
+	\jstag~\emberjstag~\stenciljstag~\internationalizationtag~\accessibilitytag~\pythontag~\djangotag~\websockettag~\apitag\newline~
 	\newline~
 	\cicdtag~\circlecitag~\githubactionstag~\kubernetestag~\amazonsthreetag~\gcptag~\newline~
 	\newline~
@@ -98,10 +105,12 @@
 	Development of an Eclipse plugin that supports the YANG language within a research team.
 }
 
+\vspace{1.0em}
+
 \section{Open source}
 
-\cvline{Development}{
-	\textbf{\href{https://github.com/GreatWizard/reliure}{reliure}}\phantom{|}
+\cvline{Developments}{
+	\textbf{\href{https://github.com/GreatWizard/reliure}{Reliure}}\phantom{|}
 	\jstag~\nodejstag~\newline~
 	Bind your books for e-readers. It compiles Microsoft Word DOCX, LibreOffice ODT, Markdown, LaTeX... files in epub, mobi and pdf with a lot of customization.\newline~
 	\newline~
@@ -130,23 +139,27 @@
 	A simple package providing the Noto Sans font face.\newline~
 }
 
-\cvline{Contribution}{
+\vspace{1.0em}
+
+\cvline{Contributions}{
+	\textbf{\href{https://github.com/adopted-ember-addons/ember-metrics}{ember-metrics}}\phantom{|}
+	\jstag~\emberjstag~\newline~
+	Add a new adapter for Pendo.\newline~
+	Migrate adapters to use native ES6 class.\newline~
+	\newline~
 	\textbf{\href{https://github.com/keycap-archivist}{keycap-archivist.com}}\phantom{|}
 	\jstag~\gatsbytag~\reacttag~\nodejstag~\newline~
 	Add features and fixes.\newline~
 	\newline~
-	\textbf{\href{https://github.com/adopted-ember-addons/ember-metrics}{ember-metrics}}\phantom{|}
-	\jstag~\emberjstag~\newline~
-	Add a new adapter for Pendo.\newline~
-	Migrate adapters to use native ES6 classe.\newline~
-	\newline~
+	A lot of contributions visible on \href{https://github.com/GreatWizard/}{github.com/GreatWizard/}.\newline~
 }
 
-\newpage{}
+\vspace{1.0em}
 
 \section{Skills}
 
 \cvline{Frontend}{
+	\textbf{Accessibility},
 	\textbf{JavaScript},
 	\textbf{EmberJS},
 	\textbf{StencilJS},
@@ -155,11 +168,10 @@
 	\textbf{Python},
 	\textbf{Django},
 	\textbf{SASS},
-	\textbf{LESS},
-	HTML5,
-	CSS3,
-	BackboneJS
+	\textbf{LESS}
 }
+
+\vspace{1.0em}
 
 \cvline{System}{
 	\textbf{NodeJS},
@@ -174,14 +186,19 @@
 	Shell Script
 }
 
-\cvline{Databases}{
+\vspace{1.0em}
+
+\cvline{Databases \& Services}{
 	PostgreSQL,
+	Redis,
 	MySQL,
 	SQLite,
 	Oracle
 }
 
-\cvline{Architecture \& Methodology }{
+\vspace{1.0em}
+
+\cvline{Architecture}{
 	\textbf{Single Page Applications},
 	\textbf{REST API},
 	\textbf{WebSocket API},
@@ -199,21 +216,60 @@
 	\textbf{Kubernetes}
 }
 
+\vspace{1.0em}
+
+\cvline{Methodology}{
+	\textbf{Scrum},
+	\textbf{Kanban}
+}
+
+\vspace{1.0em}
+
 \cvline{Languages}{
 	French,
 	English (TOEIC: 850) and technical vocabulary,
 	German (school)
 }
 
+\vspace{1.0em}
+
+\section{Conferences}
+
+\cvline{Speaking}{
+	\textbf{Paris EmberJS Lab \#6} -- Paris -- November, 2019\newline~
+	\href{https://guillaume.sh/talks}{Migrer de ember-i18n à ember-intl}\newline~
+	\href{https://guillaume.sh/talks}{Taking Over Server-side Rendering Websites}\newline~
+}
+
+\vspace{1.0em}
+
+\cvline{Attendees}{
+	\textbf{EmberFest 2021} -- Rome -- October, 2018\newline~
+	\newline~
+	\textbf{EmberFest 2019} -- Copenhagen -- October, 2018\newline~
+	\newline~
+	\textbf{EmberFest 2018} -- Amsterdam -- October, 2018\newline~
+	\newline~
+	\textbf{EmberFest 2017} -- Berlin -- October, 2018\newline~
+}
+
+\vspace{1.0em}
+
 \section{Education}
 
-\tllabelcventry[linecolor]{2010}{2013}{2010}{IT Master at TELECOM Nancy / ESIAL}{}{}{}{Software Engineering Specialization -- Université de Lorraine, France}
+\tllabelcventry[timelinecolor]{2010}{2013}{2010}{IT Master at TELECOM Nancy / ESIAL}{}{}{}{Software Engineering Specialization -- Université de Lorraine, France}
 
-\tllabelcventry[linecolor]{2008}{2010}{2008}{Associate's Degree in Software Development -- DUT informatique}{}{}{}{IUT Charlemagne -- Nancy, France}
+\vspace{1.0em}
+
+\tllabelcventry[timelinecolor]{2008}{2010}{2008}{Associate's Degree in Software Development -- DUT informatique}{}{}{}{IUT Charlemagne -- Nancy, France}
+
+\vspace{1.0em}
 
 \section{Hobbies}
 
 \cvline{Culture}{Moviegoer, Learning japanese, Mangas}
+
+\vspace{1.0em}
 
 \cvline{Sport}{Aïkido, Ski, Bike}
 
