@@ -87,6 +87,15 @@ const Layout = ({ location, title, children }) => {
             </a>
             <span> / </span>
             <a
+              rel="me"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://mamot.fr/@greatwizard"
+            >
+              Mastodon
+            </a>
+            <span> / </span>
+            <a
               target="_blank"
               rel="noreferrer noopener"
               href={`https://www.linkedin.com/in/${social.linkedin}/`}
