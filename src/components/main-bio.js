@@ -67,15 +67,14 @@ const MainBio = () => {
           fontSize: `2rem`,
         }}
       >
-        Hello! My name is {author}. I'm Software Architect / Lead Software
-        Engineer at
+        Hello! My name is {author}. I'm Principal Software Engineer at
         {` `}
         <a
           target="_blank"
           rel="noreferrer noopener"
-          href="https://www.people-doc.com"
+          href="https://www.ukg.com"
         >
-          PeopleDoc
+          UKG
         </a>
         .{` `}
         <span role="img" aria-label="man technologist">
