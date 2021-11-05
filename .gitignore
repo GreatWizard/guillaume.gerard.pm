@@ -12,10 +12,8 @@ node_modules/
 .cache/
 public
 
-# pdflatex
-/scripts/*.aux
-/scripts/*.log
-/scripts/*.out
-/scripts/*.fdb_latexmk
-/scripts/*.fls
-/scripts/*.synctex.gz
+# scripts
+/scripts/*
+!/scripts/*.js
+!/scripts/*.tex
+!/scripts/*.sty

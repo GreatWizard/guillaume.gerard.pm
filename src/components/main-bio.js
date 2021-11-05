@@ -84,7 +84,7 @@ const MainBio = () => {
       <ul className="horizontal-links" style={{ marginBottom: rhythm(1) }}>
         <li>
           <a
-            class="box-shadow-none"
+            className="box-shadow-none"
             target="_blank"
             rel="noreferrer noopener"
             href={`https://github.com/${social.github}`}
@@ -94,7 +94,7 @@ const MainBio = () => {
         </li>
         <li>
           <a
-            class="box-shadow-none"
+            className="box-shadow-none"
             target="_blank"
             rel="noreferrer noopener"
             href={`https://twitter.com/${social.twitter}`}
@@ -104,7 +104,7 @@ const MainBio = () => {
         </li>
         <li>
           <a
-            class="box-shadow-none"
+            className="box-shadow-none"
             target="_blank"
             rel="noreferrer noopener"
             href={`https://www.linkedin.com/in/${social.linkedin}/`}

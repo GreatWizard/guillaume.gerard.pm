@@ -87,9 +87,8 @@ const Layout = ({ location, title, children }) => {
             </a>
             <span> / </span>
             <a
-              rel="me"
               target="_blank"
-              rel="noreferrer noopener"
+              rel="me noreferrer noopener"
               href="https://mamot.fr/@greatwizard"
             >
               Mastodon
