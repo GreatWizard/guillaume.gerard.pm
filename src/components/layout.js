@@ -66,7 +66,7 @@ const Layout = ({ location, title, children }) => {
         }}
       >
         <main>{children}</main>
-        <footer className="footer">
+        <footer>
           © {new Date().getFullYear()} Guillaume Gérard
           {` `}
           <div>

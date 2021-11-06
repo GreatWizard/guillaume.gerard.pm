@@ -18,7 +18,7 @@ const TalkTemplate = ({ data, pageContext, location }) => {
         description={talk.frontmatter.description || talk.excerpt}
         keywords={talk.frontmatter.keywords}
       />
-      <article className="article">
+      <article>
         <header>
           <h1>
             {talk.frontmatter.published ? "" : "[DRAFT] "}

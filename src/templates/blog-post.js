@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
         keywords={post.frontmatter.keywords}
       />
-      <article className="article">
+      <article>
         <header>
           <h1>
             {post.frontmatter.published ? "" : "[DRAFT] "}

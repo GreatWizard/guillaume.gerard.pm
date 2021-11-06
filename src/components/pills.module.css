@@ -111,3 +111,100 @@
   background-color: #cfd8dc;
   color: #263238;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+  .pill--red {
+    color: #ffcdd2;
+    background-color: #b71c1c;
+  }
+
+  .pill--pink {
+    color: #f8bbd0;
+    background-color: #880e4f;
+  }
+
+  .pill--purple {
+    color: #e1bee7;
+    background-color: #4a148c;
+  }
+
+  .pill--deep-purple {
+    color: #d1c4e9;
+    background-color: #311b92;
+  }
+
+  .pill--indigo {
+    color: #c5cae9;
+    background-color: #1a237e;
+  }
+
+  .pill--blue {
+    color: #bbdefb;
+    background-color: #0d47a1;
+  }
+
+  .pill--light-blue {
+    color: #b3e5fc;
+    background-color: #01579b;
+  }
+
+  .pill--cyan {
+    color: #b2ebf2;
+    background-color: #006064;
+  }
+
+  .pill--teal {
+    color: #b2dfdb;
+    background-color: #004d40;
+  }
+
+  .pill--green {
+    color: #c8e6c9;
+    background-color: #1b5e20;
+  }
+
+  .pill--light-green {
+    color: #dcedc8;
+    background-color: #33691e;
+  }
+
+  .pill--lime {
+    color: #f0f4c3;
+    background-color: #827717;
+  }
+
+  .pill--yellow {
+    color: #fff9c4;
+    background-color: #f57f17;
+  }
+
+  .pill--amber {
+    color: #ffecb3;
+    background-color: #ff6f00;
+  }
+
+  .pill--orange {
+    color: #ffe0b2;
+    background-color: #e65100;
+  }
+
+  .pill--deep-orange {
+    color: #ffccbc;
+    background-color: #bf360c;
+  }
+
+  .pill--brown {
+    color: #d7ccc8;
+    background-color: #3e2723;
+  }
+
+  .pill--grey {
+    color: #f5f5f5;
+    background-color: #212121;
+  }
+
+  .pill--blue-grey {
+    color: #cfd8dc;
+    background-color: #263238;
+  }
+}

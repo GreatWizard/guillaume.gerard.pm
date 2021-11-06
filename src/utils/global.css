@@ -1,12 +1,18 @@
 body {
-  --black: #000000;
-  --white: #ffffff;
-  --gray: #717171;
-  --blue: #0092bc;
-  --image-border-width: 0px;
+  --text: #000000;
+  --discret: #717171;
+  --link: #0092bc;
+  color: var(--text);
+  background-color: #ffffff;
+}
 
-  color: var(--black);
-  background-color: var(---white);
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --text: #e8e6e3;
+    --discret: #a1988c;
+    --link: #48d6ff;
+    background-color: #181a1b;
+  }
 }
 
 /* header */
@@ -26,17 +32,17 @@ body {
 
 /* bio */
 .main-bio {
-  justify-content: space-between;
-  color: var(--blue);
+  text-align: justify;
+  color: var(--link);
 }
 .box-shadow-none {
   box-shadow: none;
 }
 .main-bio svg {
-  color: var(--gray);
+  color: var(--discret);
 }
 .main-bio svg:hover {
-  color: var(--blue);
+  color: var(--link);
 }
 .bio {
   display: flex;
@@ -44,8 +50,11 @@ body {
 }
 
 /* article */
-.article header a {
+article header a {
   box-shadow: none;
+}
+article section {
+  text-align: justify;
 }
 .article-nav ul {
   display: flex;
@@ -56,7 +65,7 @@ body {
 }
 
 /* footer */
-.footer {
+footer {
   font-size: 0.8rem;
   display: flex;
   justify-content: space-between;
@@ -65,14 +74,14 @@ body {
 /* links */
 small,
 small a {
-  color: var(--gray);
+  color: var(--discret);
 }
 a {
-  color: var(--black);
+  color: var(--text);
   transition: color 0.2s ease;
 }
 a:hover {
-  color: var(--blue);
+  color: var(--link);
   transition: color 0.3s ease;
 }
 
@@ -123,6 +132,6 @@ a.anchor {
 
 /* gatsby-remark-code-title */
 .gatsby-code-title {
-  color: var(--gray);
+  color: var(--discret);
   font-style: italic;
 }
