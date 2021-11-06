@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import MainBio from "../components/main-bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Pills from "../components/pills"
 import { rhythm } from "../utils/typography"
 import pluralizeReadingTime from "../utils/pluralize-reading-time"
@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Writing" />
+      <Seo title="Writing" />
       <MainBio />
       {posts.map(({ node: post }) => {
         const title = post.frontmatter.title || post.fields.slug

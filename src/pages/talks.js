@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import MainBio from "../components/main-bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Pills from "../components/pills"
 import { rhythm } from "../utils/typography"
 
@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Speaking" />
+      <Seo title="Speaking" />
       <MainBio />
       {talks.map(({ node: talk }) => {
         const title = talk.frontmatter.title || talk.fields.slug

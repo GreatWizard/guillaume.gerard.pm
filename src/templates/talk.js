@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Pills from "../components/pills"
 import { rhythm, scale } from "../utils/typography"
 
@@ -13,7 +13,7 @@ const TalkTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
+      <Seo
         title={talk.frontmatter.title}
         description={talk.frontmatter.description || talk.excerpt}
         keywords={talk.frontmatter.keywords}
