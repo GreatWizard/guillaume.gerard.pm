@@ -155,6 +155,11 @@
 \newcommand{\stenciljstag}{\begin{tikzpicture}\node [stenciljstag] (box){{\scriptsize \textbf{\phantom{|}StencilJS\phantom{|}}}};\end{tikzpicture}}
 \usepackage{tikz}
     
+\definecolor{stylustag}{RGB}{179,209,7}
+\tikzstyle{stylustag} = [draw=stylustag, fill=stylustag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
+\newcommand{\stylustag}{\begin{tikzpicture}\node [stylustag] (box){{\scriptsize \textbf{\phantom{|}Stylus\phantom{|}}}};\end{tikzpicture}}
+\usepackage{tikz}
+    
 \definecolor{terraformtag}{RGB}{109,103,230}
 \tikzstyle{terraformtag} = [draw=terraformtag, fill=terraformtag, very thick, rectangle, rounded corners, inner sep=1pt, inner ysep=2pt]
 \newcommand{\terraformtag}{\begin{tikzpicture}\node [terraformtag] (box){{\scriptsize \color{white}{\textbf{\phantom{|}Terraform\phantom{|}}}}};\end{tikzpicture}}

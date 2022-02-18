@@ -122,6 +122,10 @@ const tags = {
     text: "SASS",
     rgb: "204,102,153",
   },
+  stylustag: {
+    text: "Stylus",
+    rgb: "179,209,7",
+  },
   gatsbytag: {
     text: "Gatsby",
     rgb: "101,51,149",
