@@ -11,10 +11,10 @@ const ResumePage = ({ data, location }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="Résumé" />
+      <Seo title="Resume" />
       <MainBio />
-      <h2>My Résumé</h2>
-      <Pdf src={`${rootPath}Guillaume_GERARD_Resume.pdf`} title="my résumé" />
+      <h2>My Resume</h2>
+      <Pdf src={`${rootPath}Guillaume_GERARD_Resume.pdf`} title="my resume" />
     </Layout>
   )
 }
