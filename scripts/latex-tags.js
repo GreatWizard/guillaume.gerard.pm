@@ -69,7 +69,7 @@ const tags = {
   jstag: {
     text: "JS",
     rgb: "248,220,61",
-    color: "darkgray"
+    color: "darkgray",
   },
   kubernetestag: {
     text: "Kubernetes",
@@ -111,7 +111,7 @@ const tags = {
   },
   csstag: {
     text: "CSS",
-    rgb: "40,168,221"
+    rgb: "40,168,221",
   },
   lesstag: {
     text: "LESS",
