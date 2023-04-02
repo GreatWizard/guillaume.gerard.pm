@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `guillaume.sh`,
+    title: `guillaume.gerard.pm`,
     author: `Guillaume Gérard`,
     description: `Guillaume Gérard's personnal blog.`,
-    siteUrl: `https://guillaume.sh/`,
+    siteUrl: `https://guillaume.gerard.pm/`,
     keywords: [
       `blog`,
       `software`,
@@ -18,7 +18,7 @@ module.exports = {
       `guillaume`,
       `gerard`,
       `gérard`,
-      `guillaume.sh`,
+      `guillaume.gerard.pm`,
       `greatwizard`,
     ],
     social: {

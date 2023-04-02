@@ -1,13 +1,13 @@
 {
-  "name": "guillaume.sh",
+  "name": "guillaume.gerard.pm",
   "private": true,
   "description": "My personnal blog powered by Gatsby and Markdown",
   "version": "0.0.0",
   "author": "Guillaume Gérard <guillaume.gerard88@gmail.com>",
   "bugs": {
-    "url": "https://github.com/GreatWizard/guillaume.sh/issues"
+    "url": "https://github.com/GreatWizard/guillaume.gerard.pm/issues"
   },
-  "homepage": "https://github.com/GreatWizard/guillaume.sh#readme",
+  "homepage": "https://github.com/GreatWizard/guillaume.gerard.pm#readme",
   "keywords": [
     "gatsby"
   ],
@@ -15,7 +15,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GreatWizard/guillaume.sh.git"
+    "url": "git+https://github.com/GreatWizard/guillaume.gerard.pm.git"
   },
   "scripts": {
     "develop": "gatsby develop",
