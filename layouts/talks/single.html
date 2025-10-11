@@ -1,0 +1,52 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
+
+    <article class="page single talk">
+        <h1 class="single-title animate__animated animate__flipInX">{{ .Title | emojify }}</h1>
+
+        {{- with $params.subtitle -}}
+            <h2 class="single-subtitle">{{ . }}</h2>
+        {{- end -}}
+
+        {{- /* Meta */ -}}
+        <div class="post-meta">
+            <div class="post-meta-line">
+                {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
+                    <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
+                {{- end -}}
+                {{- $conference := $params.conference -}}
+                {{- with $conference -}}
+                     <i class="fas fa-microphone-lines fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}&nbsp;
+                {{- end -}}
+                {{- $location := $params.location -}}
+                {{- with $location -}}
+                     <i class="fas fa-location-dot fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}&nbsp;
+                {{- end -}}
+            </div>
+        </div>
+
+        {{- $image := $params.featuredimage -}}
+        {{- with .Resources.GetMatch "featured-image" -}}
+            {{- $image = .RelPermalink -}}
+        {{- end -}}
+        {{ $slides := $params.slides }}
+        {{- with .Resources.GetMatch "slides" -}}
+            {{- $slides = .RelPermalink -}}
+        {{- end -}}
+        {{- if and $image $slides -}}
+            <a target="_blank" rel="noreferrer noopener" href="{{ $slides }}">
+            {{- with $image -}}
+                <div class="featured-image">
+                    {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
+                </div>
+            {{- end -}}
+            </a>
+        {{- end -}}
+
+        <div class="content" id="content">
+            {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+        </div>
+    </article>
+{{- end -}}
