@@ -1,23 +1,19 @@
+import js from "@eslint/js";
+import globals from "globals";
+import markdown from "@eslint/markdown";
 import { defineConfig } from "eslint/config";
-import markdownlintPlugin from "eslint-plugin-markdownlint";
-import markdownlintParser from "eslint-plugin-markdownlint/parser.js";
-
-const rules = {
-  lineLength: "markdownlint/md013",
-};
 
 export default defineConfig([
   {
+    files: ["scripts/**/*.{js,mjs,cjs}"],
+    plugins: { js },
+    extends: ["js/recommended"],
+    languageOptions: { globals: { ...globals.browser, ...globals.node } },
+  },
+  {
     files: ["content/**/*.md"],
-    plugins: {
-      markdownlint: markdownlintPlugin,
-    },
-    languageOptions: {
-      parser: markdownlintParser,
-    },
-    rules: {
-      ...markdownlintPlugin.configs.recommended.rules,
-      [rules["lineLength"]]: 0,
-    },
+    plugins: { markdown },
+    language: "markdown/commonmark",
+    extends: ["markdown/recommended"],
   },
 ]);
