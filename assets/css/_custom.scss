@@ -64,6 +64,20 @@ header {
         }
       }
     }
+
+    .links {
+      padding: 0.5rem;
+      font-size: 1.5rem;
+
+      a * {
+        vertical-align: text-bottom;
+      }
+
+      img {
+        height: 1.5rem;
+        padding: 0 0.25rem;
+      }
+    }
   }
 
   .pdf {
