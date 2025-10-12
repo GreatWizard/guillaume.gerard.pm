@@ -18,11 +18,9 @@
     "url": "git+https://github.com/GreatWizard/guillaume.gerard.pm.git"
   },
   "scripts": {
-    "format": "prettier \"**/*.{md}\"",
     "latex": "cd scripts && node latex-tags.js > tags.tex && lualatex Guillaume_GERARD_Resume.tex && mv Guillaume_GERARD_Resume.pdf ../static/"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint-plugin-markdownlint": "^0.9.0",
     "eslint": "^9.37.0"
