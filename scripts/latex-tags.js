@@ -155,12 +155,12 @@ const tags = {
     rgb: "202,161,241",
     color: "white",
   },
-}
+};
 
 Object.keys(tags)
   .sort((a, b) => (a > b ? 1 : -1))
   .forEach((tag) => {
-    let { text, rgb, color } = tags[tag]
+    let { text, rgb, color } = tags[tag];
     console.log(`\\usepackage{tikz}
     
 \\definecolor{${tag}}{RGB}{${rgb}}
@@ -169,5 +169,5 @@ Object.keys(tags)
       color ? `\\color{${color}}{` : ``
     }\\textbf{\\phantom{|}${text}\\phantom{|}}}}${
       color ? `}` : ``
-    };\\end{tikzpicture}}`)
-  })
+    };\\end{tikzpicture}}`);
+  });

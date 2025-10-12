@@ -1,0 +1,76 @@
+baseURL = 'https://guillaume.gerard.pm/'
+languageCode = 'en-us'
+title = 'A blog by Guillaume Gérard'
+theme = 'LoveIt'
+
+enableRobotsTXT = true
+enableEmoji = true
+
+[menus]
+  [[menus.main]]
+    name = 'Writing'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Speaking'
+    pageRef = '/talks'
+    weight = 20
+  [[menus.main]]
+    name = 'Resume'
+    pageRef = '/resume'
+    weight = 30
+
+[params]
+  title = "Guillaume Gérard"
+  description = "A blog by Guillaume Gérard"
+  dateFormat = "January 2, 2006"
+
+  [params.author]
+    name = "Guillaume"
+    link = "https://guillaume.gerard.pm"
+
+  [params.header]
+    [params.header.title]
+      logo = "/images/hamburger.svg"
+      name = "guillaume.gerard.pm"
+      typeit = true
+
+  [params.footer]
+    enable = true
+    hugo = false
+    copyright = true
+    author = true
+    since = 1989
+
+  [params.section]
+    dateFormat = "Jan 2, 2006"
+
+  [params.list]
+    dateFormat = "Jan 2, 2006"
+
+  [params.home]
+    [params.home.profile]
+      enable = true
+      avatarURL = "/images/profile.jpg"
+      title = "Hello! My name is Guillaume Gérard.<br/>I'm Senior Engineer at <a href=\"https://www.crowdstrike.com\">CrowdStrike</a>. 👨‍💻"
+      subtitle = ""
+      typeit = false
+      social = true
+      disclaimer = ""
+
+  [params.social]
+    GitHub = "GreatWizard"
+    Linkedin = "guillaume-g%C3%A9rard-0263b946"
+    GitLab = "GreatWizard"
+
+  [params.page]
+    [params.page.share]
+      enable = false
+
+  [params.verification]
+    google = ""
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+
