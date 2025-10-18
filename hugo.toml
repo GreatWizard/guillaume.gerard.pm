@@ -68,9 +68,8 @@ enableEmoji = true
       enable = false
 
   [params.verification]
-    google = ""
+    google = "N8Dvxwq2xzEH1GIJ9VNF0tXEgWby1bk8YQXGUMikHP4"
     bing = ""
     yandex = ""
     pinterest = ""
     baidu = ""
-
