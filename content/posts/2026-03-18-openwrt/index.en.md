@@ -101,3 +101,21 @@ Establish secure, encrypted connections.
 ```sh
 apk add luci-proto-wireguard
 ```
+
+## Setup Syncthing
+
+Syncthing is a continuous file synchronization tool that allows you to synchronize files between multiple devices securely and efficiently. It is particularly useful for keeping files up-to-date across different devices without relying on a centralized cloud service.
+
+To install Syncthing on OpenWRT, follow these steps:
+
+1. Install the Syncthing package:
+
+```sh
+apk add syncthing
+```
+
+2. Access the Syncthing web interface by navigating to `https://192.168.1.1:8384/` in your browser.
+
+3. Configure Syncthing to synchronize files between your devices by adding folders and devices in the web interface.
+
+Syncthing is now set up on your OpenWRT router, allowing you to synchronize files across your network securely.
