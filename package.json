@@ -18,6 +18,7 @@
     "url": "git+https://github.com/GreatWizard/guillaume.gerard.pm.git"
   },
   "scripts": {
+    "update": "git submodule update --remote --merge",
     "latex": "cd scripts && node latex-tags.js > tags.tex && lualatex Guillaume_GERARD_Resume.tex && mv Guillaume_GERARD_Resume.pdf ../content/resume/"
   },
   "devDependencies": {
