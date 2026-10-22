@@ -39,7 +39,7 @@ https://openwrt.org/docs/guide-user/additional-software/extroot_configuration
 
 Add the Melmac community repository for additional packages and applications beyond the standard OpenWRT repository.
 
-https://docs.openwrt.melmac.ca/#on-your-openwrt-device-with-apk
+https://docs.mossdef.org/#on-your-openwrt-device-with-apk
 
 ## Setup Adblocker
 
